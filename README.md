@@ -181,25 +181,40 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 10.	End
 ## PROGRAM:
 ```
-#include <stdio.h>
+
+    
+    #include <stdio.h>
+#include <string.h>
+
 int main()
 {
-    float a,b,c,d;
-    float t,av,pe;
-    scanf("%f %f %f %f",&a,&b,&c,&d);
-    t=a+b+c+d;
-    av=t/4;
-    pe=(t/400)*100;
-    printf("Total marks = %.2f\n",t);
-    printf("Average marks = %.2f\n",av);
-    printf("Percentage = %.2f\n",pe);
-    return 0;
-}
+    int phy,che,ca,total;
+    float per;
+    char div[10];
 
+   
+    scanf("%d%d%d",&phy,&che,&ca);
+    total = phy+che+ca;
+    per = total/3.0;
+    if (per>=60)
+	 strcpy(div,"First");
+    else if (per<60&&per>=48)
+	    strcpy(div,"Second");
+	else
+	    if (per<48&&per>=36)
+		strcpy(div,"Pass");
+	     else
+		strcpy(div,"Fail");
+
+      
+       printf("Total Marks = %d\nPercentage = %5.2f\nDivision = %s\n",total,per,div);
+       return 0;
+}
 ```
 
 ## OUTPUT:
-![Screenshot (245)](https://github.com/user-attachments/assets/e76c5eee-a958-402f-b364-200f9f762608)
+![Screenshot (295)](https://github.com/user-attachments/assets/bcb90cd9-f8b1-472b-8d4c-ba2071186eeb)
+
 
 
 ## RESULT:
